@@ -1,0 +1,52 @@
+*******************************************************************************
+MAIN FILES
+********************************************************************************
+The study was focus on two primary data set: X_test.txt and X_train.txt
+These data set include the experiment's result carried out with a group
+of 30 volunteers:
+- Train -> trainnig results (included into X_train.txt). 7352 observations of 561
+variables.
+- test -> test results (included into X_test.txt). 2947 observations of 561 variables.
+
+The results into these data set include the measures of 561 features with
+time and frequency domain variables.
+
+The "features-info.txt" file explains the structure and meaning of each feature.
+
+All measures are normalised [-1,1].
+The "features.txt" shows the name of each feature.
+
+********************************************************************************
+OTHER NECESSARY FILES: ACTIVITIES
+********************************************************************************
+- activity.txt: Include 6 kind of activities in 2 variables (V1- Numerical and V2- text label)
+- y_train.txt and y_test.txt files: link the activities with the 7352 observations (train.txt) and
+2947 observations (test.txt)
+
+********************************************************************************
+OTHER NECESSARY FILES: SUBJECTS
+********************************************************************************
+-  subject_train.txt and subject_test.txt: link the volunteers with the 7352 observations (train.txt)
+and 2947 observations (test.txt).
+
+################################################################################
+STUDY STRUCTURE DESCRIPTION
+################################################################################
+STEP 1 - Read features data and activity labels
+STEP 2 - Read test data
+- Read dates from X_test.txt
+- Read subjects from subject_test.txt
+- Read activities from y_test.txt
+- Change the names of variables into dataset 'test' with activity labels
+- Merge data set 'test' with activities and subjects.
+STEP 3 - Read train data
+It is as step 2 with X_train.txt, subject_train.txt and y_train.txt.
+STEP 4 - Merge train and test data and do averages analysis
+- Merge test data (step2) and train data (step3) in global data.
+- Use dplyr library to grouping and average calculate
+
+********************************************************************************
+FINAL TIDY DATA SET
+********************************************************************************
+struct_data.txt: 180 observations of 561 variables(features) with the average of
+each variable for each activity and each subject.
