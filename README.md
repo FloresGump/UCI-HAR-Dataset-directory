@@ -1,4 +1,3 @@
-============================================================================================================
 Tidy data set and averages analysis. From Final Project of Course "Getting and Cleaning Data"(JHU).
 Student <- Luis A. Flores Amo
 Getting and Cleaning Data Course Project
